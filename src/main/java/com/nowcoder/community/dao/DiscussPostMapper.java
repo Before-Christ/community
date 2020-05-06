@@ -23,4 +23,11 @@ public interface DiscussPostMapper {
     //查找帖子的个数，方便进行分页.
     //@param是用来取别名，如果只有一个参数，并且在<if>里使用，必须加别名。
     int selectDiscussPostRows(@Param("userId") int userId);
+
+    int insertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
+
+    //更新帖子数量
+    int updateCommentCount(int id, int commentCount);
 }
